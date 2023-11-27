@@ -106,6 +106,7 @@ button:hover{
     text-shadow: 5px 5px 15px dodgerblue;
 }
 
+/* || PC VIEW */
 @media screen and (min-width: 992px) {
     .c{
         flex-direction: row;
@@ -123,7 +124,7 @@ button:hover{
     }
 
     .c-desc{
-        font-size: 25px;
+        font-size: 20px;
     }
     
     form{
@@ -134,16 +135,16 @@ button:hover{
     }
     
     input {
-        font-size: 20px;
+        font-size: 16px;
     }
     
     textarea{
-        font-size: 20px;
+        font-size: 16px;
     }
     
     button {
         margin-top: 0;
         padding: 10px 0;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
