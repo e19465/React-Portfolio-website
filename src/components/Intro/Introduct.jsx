@@ -10,7 +10,7 @@ const Introduct = () => {
                     Hello, my name is
                 </h2>
                 <h1 className='i-name'>
-                    John Burton
+                    Sasindu Dilshan
                 </h1>
                 <div className="i-title">
                     <div className="i-title-wrapper">

@@ -1,13 +1,17 @@
 import './productList.css'
 import Product from '../Product/Product'
 import { products } from '../utilConstants/data'
-
+import { useContext } from 'react'
+import { ThemeContext } from '../../context'
 
 const ProductList = () => {
+    const theme = useContext(ThemeContext);
   return (
     <div className='pl'>
         <div className="pl-texts">
-            <h1 className="pl-title">
+            <h1 className="pl-title"  style={{
+                color: theme.state.darkMode ? "#fff" : null
+            }}>
                 Create & inspire. It's SDportfolio
             </h1>
                 <p className="pl-desc">

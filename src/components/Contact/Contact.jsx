@@ -4,8 +4,11 @@ import Phone from '../../img/phone.png'
 import Email from '../../img/email.png'
 import Address from '../../img/address.png'
 import emailjs from 'emailjs-com';
+import { useContext } from 'react'
+import { ThemeContext } from '../../context'
 
 const Contact = () => {
+    const theme = useContext(ThemeContext);
 
     const [name,setName] = useState('');
     const [email, setEmail] = useState('');
@@ -41,21 +44,27 @@ const Contact = () => {
                     <div className="c-info">
                         <div className="c-info-item">
                             <img className='c-icon' src={Phone} alt="" />
-                            <a href="tel:+1234567890">+1234567890</a>
+                            <a style={{
+                                color: theme.state.darkMode ? "#fff" : null
+                            }} href="tel:+1234567890">+1234567890</a>
                         </div>
                         
                     </div>
                     <div className="c-info">
                         <div className="c-info-item">
                             <img className='c-icon' src={Email} alt="" />
-                            <a href="mailto:info@example.com">info@example.com</a>
+                            <a style={{
+                                color: theme.state.darkMode ? "#f5f5f5" : null
+                            }} href="mailto:info@example.com">info@example.com</a>
                         </div>
                         
                     </div>
                     <div className="c-info">
                         <div className="c-info-item">
                             <img className='c-icon' src={Address} alt="" />
-                            <a href="geo:latitude,longitude?q=Street%20Address">No 10, Main Road, Colombo 10.</a>
+                            <a style={{
+                                color: theme.state.darkMode ? "#fff" : null
+                            }} href="geo:latitude,longitude?q=Street%20Address">No 10, Main Road, Colombo 10.</a>
                         </div>
                         
                     </div>
@@ -66,13 +75,25 @@ const Contact = () => {
                         freelancing if the right project comes along me.
                     </p>
                     <form ref={formRef} onSubmit={handleSubmit}>
-                        <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Name...' name='user_name' required />
+                        <input style={{
+                            backgroundColor: theme.state.darkMode ? "#333" : null,
+                            color: theme.state.darkMode ? "#f5f5f5" : null,
+                        }} value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder='Name...' name='user_name' required />
 
-                        <input value={subject} onChange={(e) => setSubject(e.target.value)} type="text" placeholder='Subject...' name='user_subject' required />
+                        <input style={{
+                            backgroundColor: theme.state.darkMode ? "#333" : null,
+                            color: theme.state.darkMode ? "#f5f5f5" : null,
+                        }} value={subject} onChange={(e) => setSubject(e.target.value)} type="text" placeholder='Subject...' name='user_subject' required />
                         
-                        <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email...' name='user_email' required />
+                        <input style={{
+                            backgroundColor: theme.state.darkMode ? "#333" : null,
+                            color: theme.state.darkMode ? "#f5f5f5" : null,
+                        }} value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email...' name='user_email' required />
                         
-                        <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message...' name="message" id="message" cols="30" rows="10"></textarea>
+                        <textarea style={{
+                            backgroundColor: theme.state.darkMode ? "#333" : null,
+                            color: theme.state.darkMode ? "#f5f5f5" : null,
+                        }} value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message...' name="message" id="message" cols="30" rows="10"></textarea>
                         <button type='submit'>Submit</button>
 
                         {isDone && (<h2 className='done-msg'>Thank you...</h2>)}

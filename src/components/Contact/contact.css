@@ -73,6 +73,7 @@ input {
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
+    padding: 10px;
 }
 
 textarea{
