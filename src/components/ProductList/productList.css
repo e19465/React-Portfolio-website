@@ -7,12 +7,12 @@
 }
 
 .pl-texts{
-    width: 65%;
+    width: 100%;
 }
 
 .pl-title{
     text-align: center;
-    font-size: 70px;
+    font-size: 30px;
     margin-bottom: 20px;
     color: midnightblue;
     font-weight: bolder;
@@ -23,9 +23,9 @@
 .pl-desc{
     font-weight: 200;
     margin-bottom: 20px;
-    padding: 0 50px;
+    padding: 0 20px;
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -35,4 +35,16 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+
+@media screen and (min-width: 992px) {
+    
+    .pl-title{
+        font-size: 70px;
+        margin-top: 20px;
+    }
+    .pl-desc{
+        font-size: 25px;
+    }
 }

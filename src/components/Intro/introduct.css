@@ -1,41 +1,45 @@
 
 .i-main{
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    height: 150vh;
 }
 
 .i-right{
-    flex: 1;
+    height: 50%;
     position: relative;
 }
 
 .i-left{
-    flex: 1;
+    height: 50%;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .i-left-wrapper{
-    padding: 50px;
-    height: 50%;
-    /* background-color: red; */
+    padding: 20px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .i-name-first{
-    font-size: 50px;
+    font-size: 20px;
     font-weight: 300;
 }
 
 .i-name{
-    font-size: 80px;
+    font-size: 25px;
 }
 
 .i-title{
-    height: 60px;
+    height: 30px;
     overflow: hidden;
 }
 
@@ -61,7 +65,7 @@
 
 .i-title-item{
     height: 60px;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: bold;
     color: #59b256;
     display: flex;
@@ -69,7 +73,9 @@
 }
 
 .i-desc{
-    font-size: 25px;
+    font-size: 18px;
+    width: 80%;
+    text-align: justify;
 }
 
 .i-right-bg{
@@ -83,10 +89,12 @@
 }
 
 .i-right-img{
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
     position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .i-scroll{
@@ -96,4 +104,60 @@
     bottom: 20px;
 }
 
+/* || TABLET VIEW */
+@media screen and (min-width: 768px) {
+    
+    .i-main{
+        height: 100vh;
+    }
+    .i-left{
+        height: 40%;
+        padding-top: 0px;
+    }
+    .i-right{
+        height: 60%;
+        position: relative;
+    }
+}
 
+/* || PC VIEW */
+@media screen and (min-width: 992px) {
+    
+.i-main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.i-right{
+    height: 100%;
+    flex: 1;
+}
+
+.i-left{
+    flex: 1;
+    height: 100%;
+}
+
+.i-name-first{
+    font-size: 50px;
+}
+
+.i-name{
+    font-size: 80px;
+}
+
+.i-title{
+    height: 50px;
+    overflow: hidden;
+}
+
+.i-title-item{
+    font-size: 50px;
+}
+
+.i-desc{
+    font-size: 25px;
+}
+
+}

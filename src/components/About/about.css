@@ -1,8 +1,10 @@
 .a{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 200vh;
+    margin-top: 30px;
 }
 
 .a-left{
@@ -11,14 +13,23 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100%;
+    min-height: 50%;
+    width: 100%;
 }
 
 .a-right{
+    padding: 10px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50%;
+    text-align: center;
 }
 
 .a-card.bg{
+    display: none;
     position: absolute;
     top: 80px;
     left: 100px;
@@ -26,7 +37,7 @@
 }
 
 .a-card{
-    width: 60%;
+    width: 90%;
     height: 70vh;
     border-radius: 30px;
     overflow: hidden;
@@ -47,36 +58,131 @@
 
 .a-title{
     font-weight: 400;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .a-sub{
-    font-size: 25px;
+    font-size: 20px;
     margin: 20px 0px;
 }
 
 .a-desc{
-    font-size: 23px;
+    font-size: 15px;
     font-weight: 300;
 }
 
 .a-award{
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
 .a-award-texts{
     width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .a-award-title{
-    font-size: 35px;
+    font-size: 20px;
     color: #555;
     margin-bottom: 10px;
 }
 
 .a-award-desc{
-    font-size: 23px;
+    font-size: 18px;
+}
+
+
+
+/* || TABLET VIEW */
+@media screen and (min-width: 768px) {
+    .a{
+        min-height: 100vh;
+    }
+    .a-right{
+        padding: 10px 50px;
+    }
+    .a-right{
+        justify-content: flex-start;
+        min-height: 50%;
+    }
+
+    .a-card{
+        width: 90%;
+        height: 50vh;
+    }
+    .a-card.bg{
+        display: none;
+        top: 100px;
+        left: 150px;
+        background-color: #817a7a;
+    }
+    .a-award-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+    }
+    
+    
+    .a-award{
+        flex-direction: row;
+    }
+    
+}
+
+/* || PC VIEW */
+@media screen and (min-width: 992px) {
+    .a{
+        flex-direction: row;
+        min-height: 100vh;
+        margin-top: 0px;
+    }
+
+    .a-card.bg{
+        display: flex;
+        top: 100px;
+        left: 100px;
+        background-color: #817a7a;
+    }
+    
+    .a-card{
+        width: 50%;
+        height: 70vh;
+    }
+    
+    .a-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+    
+    
+    .a-title{
+        font-weight: 400;
+        font-size: 50px;
+    }
+    
+    .a-sub{
+        font-size: 25px;
+    }
+    
+    .a-desc{
+        font-size: 20px;
+    }
+    
+    .a-award{
+        flex-direction: row;
+    }
+    
+    .a-award-title{
+        font-size: 30px;
+    }
+    
+    .a-award-desc{
+        font-size: 20px;
+    }
 }

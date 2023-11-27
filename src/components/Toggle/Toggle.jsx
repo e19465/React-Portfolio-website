@@ -16,7 +16,7 @@ const Toggle = () => {
         <img src={Sun} alt="" className='t-icon'/>
         <img src={Moon} alt="" className='t-icon'/>
         <div className="t-button" onClick={handleDarkMode} style={{
-        right: theme.state.darkMode ? 0 : 45
+        left: theme.state.darkMode ? 35 : 0
         }}></div>
     </div>
   )
