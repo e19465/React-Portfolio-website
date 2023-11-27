@@ -134,17 +134,21 @@
     flex: 1;
 }
 
+.i-right-img{
+    width: 100%;
+}
+
 .i-left{
     flex: 1;
     height: 100%;
 }
 
 .i-name-first{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .i-name{
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .i-title{
@@ -153,11 +157,11 @@
 }
 
 .i-title-item{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .i-desc{
-    font-size: 25px;
+    font-size: 18px;
 }
 
 }
